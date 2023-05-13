@@ -28,3 +28,4 @@ public class DocenteDTO {
     @NotBlank
     private String correo;
 
+}
