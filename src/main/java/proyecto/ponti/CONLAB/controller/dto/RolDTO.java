@@ -13,10 +13,5 @@ public class RolDTO {
 
     @NotBlank
     @Size(min = 3, max = 25)
-    private String usuario;
-
-    @NotBlank
-    private String contraseña;
-
-
+    private String cargo;
 }
