@@ -12,7 +12,5 @@ public class Rol{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="idrol")
     private Integer id;
-    private String usuario;
-    private String contraseña;
-
+    private String cargo;
 }
