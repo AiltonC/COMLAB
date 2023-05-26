@@ -18,6 +18,7 @@ import proyecto.ponti.CONLAB.repository.Alumnorepository;
 public class Alumnocontroller {
 
     private final Alumnorepository alumnorepository;
+    private Pageable pageable;
 
 
     public Alumnocontroller(Alumnorepository alumnorepository){
@@ -25,7 +26,7 @@ public class Alumnocontroller {
     }
 
     @GetMapping("")
-    Page<Alumno> index(@PageableDefault(sort = "codigo",size=5)Pageable pageable){
+    Page<Alumno> index(@PageableDefault(sort = "codigo",size=15)Pageable pageable){
         return alumnorepository.findAll(pageable);
     }
 
@@ -35,11 +36,18 @@ public class Alumnocontroller {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/reg")
+    @PostMapping("/crear")
     Alumno crear(@RequestBody @Validated AlumnoDTO alumnoDTO){
         Alumno alumno=new ModelMapper().map(alumnoDTO,Alumno.class);
         return alumnorepository.save(alumno);
+
+
+    /*Alumno crear (@RequestBody Alumno alumno){
+        return alumnorepository.save(alumno);
+
+     */
     }
+
     @PutMapping("/{id}")
     Alumno actualizar(@PathVariable Integer id, @RequestBody AlumnoDTO alumnoDTO){
         Alumno alumno=alumnorepository

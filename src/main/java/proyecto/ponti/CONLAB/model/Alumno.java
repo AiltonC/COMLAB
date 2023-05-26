@@ -18,19 +18,19 @@ public class Alumno {
     private String apmaterno;
     private String celular;
     private String correo;
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "idcarrera")
     private Carrera idcarrera;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "idciclo")
     private Ciclo idciclo;
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "idcurso")
     private Curso idcurso;
-    @ManyToMany
+    @OneToOne
     @JoinColumn(name = "idequipo")
     private Equipo idequipo;
-    @ManyToMany
+    @OneToOne
     @JoinColumn(name = "idgestudio")
     private Gestudio idgestudio;
 }

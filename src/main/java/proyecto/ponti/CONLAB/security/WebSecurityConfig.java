@@ -1,5 +1,4 @@
 package proyecto.ponti.CONLAB.security;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,21 +14,21 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class WebSecurityConfig {
-
     @Bean
-    SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception{
+    SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception {
         return http
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .anyRequest()
                 .authenticated()
                 .and()
+                .httpBasic()
+                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .build();
     }
-
     @Bean
     UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager manager=new InMemoryUserDetailsManager();
@@ -41,7 +40,7 @@ public class WebSecurityConfig {
     }
     @Bean
     AuthenticationManager authManager(HttpSecurity http) throws Exception {
-        return http.getSharedObject(AuthenticationManagerBuilder.class)
+        return  http.getSharedObject(AuthenticationManagerBuilder.class)
                 .userDetailsService(userDetailsService())
                 .passwordEncoder(passwordEncoder())
                 .and()
@@ -52,4 +51,3 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-

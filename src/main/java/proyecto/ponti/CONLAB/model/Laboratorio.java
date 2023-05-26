@@ -12,6 +12,14 @@ public class Laboratorio {
     private Integer id;
 
     private String nomlab;
+    @OneToOne
+    @JoinColumn(name = "idequipo")
+    private Equipo idequipo;
+
+    @OneToOne
+    @JoinColumn(name = "idcomp")
+    private Componente idcomp;
+
 
 
 }

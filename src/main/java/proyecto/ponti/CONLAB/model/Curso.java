@@ -11,10 +11,9 @@ public class Curso {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idcurso")
     private Integer id;
-    private  String idcurso;
     private  String nomcurso;
     private  String horas;
-    @ManyToMany
+    @OneToOne
     @JoinColumn(name = "iddocente")
     private Docente iddocente;
 }

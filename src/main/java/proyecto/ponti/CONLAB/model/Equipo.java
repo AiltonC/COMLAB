@@ -14,11 +14,4 @@ public class Equipo {
 
     private String nomequipo;
 
-    @OneToMany
-    @JoinColumn(name = "idequipo")
-    private Equipo idequipo;
-
-    @ManyToMany
-    @JoinColumn(name = "idcomp")
-    private Componente idcomp;
 }

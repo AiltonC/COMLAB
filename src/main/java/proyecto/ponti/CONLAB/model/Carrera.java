@@ -13,7 +13,7 @@ public class Carrera {
     @Column(name="idcarrera")
     private Integer id;
     private String nomcarrera;
-    @ManyToMany
+    @OneToOne
     @JoinColumn(name = "idgestudio")
     private Gestudio idgestudio;
 }

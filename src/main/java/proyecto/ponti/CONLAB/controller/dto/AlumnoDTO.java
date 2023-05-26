@@ -1,6 +1,7 @@
 package proyecto.ponti.CONLAB.controller.dto;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import proyecto.ponti.CONLAB.model.*;
@@ -27,23 +28,23 @@ public class AlumnoDTO {
     private String celular;
     @NotBlank
     private String correo;
-    @NotBlank
+    @NotNull
     @OneToOne
     @JoinColumn(name = "idcarrera")
     private Carrera idcarrera;
-    @NotBlank
+    @NotNull
     @OneToOne
     @JoinColumn(name = "idciclo")
     private Ciclo idciclo;
-    @NotBlank
+    @NotNull
     @OneToOne
     @JoinColumn(name = "idcurso")
     private Curso idcurso;
-    @NotBlank
+    @NotNull
     @OneToOne
     @JoinColumn(name = "idequipo")
     private Equipo idequipo;
-    @NotBlank
+    @NotNull
     @OneToOne
     @JoinColumn(name = "idgestudio")
     private Gestudio idgestudio;

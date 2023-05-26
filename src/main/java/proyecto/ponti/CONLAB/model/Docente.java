@@ -11,7 +11,6 @@ public class Docente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "iddocente")
     private Integer id;
-    private int iddocente;
     private String nomdocente;
     private String appaterno;
     private String apmaterno;

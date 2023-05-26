@@ -16,7 +16,7 @@ public class claselaboratorio {
  private Date horaentrada;
  private Date horasalida;
  private Date fecha;
- @ManyToMany
+ @OneToOne
  @JoinColumn(name = "idlab")
  private Laboratorio idlaboratorio;
 

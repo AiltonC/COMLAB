@@ -8,11 +8,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import proyecto.ponti.CONLAB.controller.dto.ComponenteDTO;
 import proyecto.ponti.CONLAB.controller.dto.EquipoDTO;
-import proyecto.ponti.CONLAB.model.Componente;
 import proyecto.ponti.CONLAB.model.Equipo;
-import proyecto.ponti.CONLAB.repository.Componenterepository;
 import proyecto.ponti.CONLAB.repository.EquipoRepository;
 
 @RestController
