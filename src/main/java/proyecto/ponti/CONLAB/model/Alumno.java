@@ -33,4 +33,10 @@ public class Alumno {
     @OneToOne
     @JoinColumn(name = "idgestudio")
     private Gestudio idgestudio;
+
+    public String getNombreCompleto(){
+        return this.nomalumno!=null && this.appaterno!=null && this.apmaterno!=null ?
+                this.nomalumno +" "+ this.appaterno +" "+ this.apmaterno:"-------";
+    }
+
 }
