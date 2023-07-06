@@ -23,11 +23,14 @@ public class FileSystemStorageService {
     private final static String STORAGE_LOCATION="mediafile";
 
     @PostConstruct
-    public void init(){
-        try {
-            Files.createDirectory(Paths.get(STORAGE_LOCATION));
-        }catch (IOException ex){
-            throw new RuntimeException("NO SE PUDO CREAR EL ALMACEN DE DATOS"+STORAGE_LOCATION);
+    public  void init(){
+        try{
+            Path storageLocation = Paths.get(STORAGE_LOCATION);
+            if(!Files.exists(storageLocation)){
+                Files.createDirectory(Paths.get(STORAGE_LOCATION));
+            }
+        } catch (IOException ex){
+            throw new RuntimeException("No se pudo crear el almacen de datos",ex);
         }
     }
 

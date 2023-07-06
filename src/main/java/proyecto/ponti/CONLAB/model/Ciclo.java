@@ -7,6 +7,7 @@ import java.util.Date;
 
 @Data
 @Entity
+@Table(name = "ciclo")
 public class Ciclo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
