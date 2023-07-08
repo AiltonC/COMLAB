@@ -18,7 +18,6 @@ proyecto\ponti\CONLAB\repository\Cursorepository.class
 proyecto\ponti\CONLAB\controller\dto\ComponenteDto.class
 proyecto\ponti\CONLAB\controller\Claselaboratoriocontroller.class
 proyecto\ponti\CONLAB\config\CorsConfig.class
-proyecto\ponti\CONLAB\security\WebSecurityConfig.class
 proyecto\ponti\CONLAB\controller\Rolcontroller.class
 proyecto\ponti\CONLAB\config\CorsConfig$1.class
 proyecto\ponti\CONLAB\controller\Carreracontroller.class
