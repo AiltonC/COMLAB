@@ -15,7 +15,10 @@ import proyecto.ponti.CONLAB.model.Curso;
 import proyecto.ponti.CONLAB.repository.Ciclorepository;
 import proyecto.ponti.CONLAB.repository.Cursorepository;
 @RestController
+
 @RequestMapping("/api/admin/ciclo")
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class Ciclocontroller {
     private final Ciclorepository ciclorepository;
 

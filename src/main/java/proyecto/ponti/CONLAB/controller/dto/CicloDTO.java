@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import proyecto.ponti.CONLAB.model.*;
 
 

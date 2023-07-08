@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/assets")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AssetController {
     private final FileSystemStorageService storageService;
 

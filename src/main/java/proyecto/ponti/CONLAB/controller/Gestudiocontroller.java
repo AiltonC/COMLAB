@@ -21,6 +21,7 @@ import proyecto.ponti.CONLAB.repository.Gestudiorepository;
 
 @RestController
 @RequestMapping("/api/admin/gestudio")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Gestudiocontroller {
     private final Gestudiorepository gestudiorepository;
 

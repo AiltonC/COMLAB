@@ -17,6 +17,7 @@ import proyecto.ponti.CONLAB.repository.Usuariorepository;
 
 @RestController
 @RequestMapping("/api/admin/usuario")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Usuariocontroller {
     private final Usuariorepository usuariorepository;
 

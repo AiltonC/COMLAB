@@ -14,6 +14,7 @@ import proyecto.ponti.CONLAB.repository.EquipoRepository;
 
 @RestController
 @RequestMapping("/api/admin/equipo")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Equipocontroller {
     private final EquipoRepository equiporepository;
 

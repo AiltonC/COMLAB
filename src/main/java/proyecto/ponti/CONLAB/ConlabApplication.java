@@ -7,7 +7,7 @@ package proyecto.ponti.CONLAB;
 @SpringBootApplication
 public class ConlabApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 	{
 		SpringApplication.run(ConlabApplication.class, args);
 	}
 

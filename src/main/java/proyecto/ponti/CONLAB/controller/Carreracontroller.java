@@ -18,6 +18,7 @@ import proyecto.ponti.CONLAB.repository.Carrerarepository;
 
 @RestController
 @RequestMapping("/api/admin/carrera")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Carreracontroller {
 
     private final Carrerarepository carrerarepository;

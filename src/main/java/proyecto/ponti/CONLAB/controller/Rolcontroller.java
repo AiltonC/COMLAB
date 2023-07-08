@@ -17,6 +17,7 @@ import proyecto.ponti.CONLAB.repository.Rolrepository;
 
 @RestController
 @RequestMapping("/api/admin/rol")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Rolcontroller {
     private final Rolrepository rolrepository;
 

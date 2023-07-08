@@ -14,6 +14,7 @@ import proyecto.ponti.CONLAB.repository.Componenterepository;
 
 @RestController
 @RequestMapping("/api/admin/componente")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Componentecontroller {
     private final Componenterepository componenterepository;
 

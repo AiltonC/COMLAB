@@ -14,6 +14,7 @@ import proyecto.ponti.CONLAB.repository.Docenterepository;
 
 @RestController
 @RequestMapping("/api/admin/docente")
+@CrossOrigin(origins = "http://localhost:4200")
 public class Docentecontroller {
 
     private final Docenterepository docenterepository;
